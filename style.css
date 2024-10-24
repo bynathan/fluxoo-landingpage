@@ -1,0 +1,846 @@
+/* Variables primary fluxoo project */
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* Scoped styles */
+#landingpage main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 15px 0;
+  margin: 0 0 100px 0;
+  background-color: #EAF9F9;
+  background-image: url("./assets/images/background.png");
+  background-repeat: no-repeat;
+  background-position: calc(50% - 680px) 190px;
+}
+#landingpage main header {
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 135px 0;
+}
+#landingpage main header section {
+  display: flex;
+  align-items: center;
+}
+#landingpage main header section:first-child {
+  column-gap: 40px;
+}
+#landingpage main header section:first-child ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  column-gap: 14px;
+  background: #C7E2E1;
+  border-radius: 50px;
+  padding: 6px 8px;
+}
+#landingpage main header section:first-child ul li {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  padding: 0 24px;
+  border-radius: 50px;
+  color: #090909;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+#landingpage main header section:first-child ul li svg {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  min-height: 20px;
+  stroke: #090909;
+  transition: stroke 0.2s, transform 0.4s;
+}
+#landingpage main header section:first-child ul li:hover {
+  background: #05CB95;
+  color: #FFF;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+#landingpage main header section:first-child ul li:hover svg {
+  stroke: #FFF;
+}
+#landingpage main header section:first-child ul li.active {
+  background: #05CB95;
+  color: #FFF;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  cursor: default;
+}
+#landingpage main header section:last-child {
+  column-gap: 16px;
+}
+#landingpage main header section:last-child input {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 0 24px;
+  border: 2px solid #05CB95;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+#landingpage main header section:last-child input:first-child {
+  background: #05CB95;
+  color: #FFF;
+}
+#landingpage main header section:last-child input:first-child:hover {
+  border-color: #079F72;
+  background: #079F72;
+}
+#landingpage main header section:last-child input:last-child {
+  background: transparent;
+  color: #05CB95;
+}
+#landingpage main header section:last-child input:last-child:hover {
+  border-color: #079F72;
+  background: #079F72;
+  color: #FFF;
+}
+#landingpage main header img {
+  cursor: pointer;
+}
+#landingpage main h1 {
+  color: #090909;
+  font-family: "Judson", sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+  margin: 0;
+}
+#landingpage main h2 {
+  color: #090909;
+  font-family: "Judson", sans-serif;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 70px;
+  margin: 0;
+}
+#landingpage main p {
+  max-width: 433px;
+  color: #090909;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 13px 0 0 0;
+}
+#landingpage main .programs {
+  width: 100%;
+  max-width: 1659px;
+  height: 382px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 117px 0 0 0;
+  overflow: hidden;
+}
+#landingpage main .programs img:nth-child(1) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+#landingpage main .programs img:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  z-index: 2;
+  box-shadow: 10px 100px 109px 0px rgba(0, 0, 0, 0.2);
+}
+#landingpage main .programs img:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+#landingpage section.cards {
+  width: 100%;
+  max-width: 1170px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 32px;
+  row-gap: 20px;
+  margin: 0 auto 100px;
+}
+#landingpage section.cards div h1 {
+  color: #090909;
+  font-family: "Nunito", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;
+  margin: 0 0 13px 0;
+}
+#landingpage section.cards div h2 {
+  color: #6F6F6F;
+  font-family: "Inter", sans-serif;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 40px;
+  margin: 0 0 3px 0;
+}
+#landingpage section.cards div p {
+  max-width: 259px;
+  color: #6F6F6F;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  margin: 0;
+}
+#landingpage section.cards article {
+  height: 306px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 24px 50px;
+  background: #E0ECE9;
+  border-radius: 40px;
+  transition: background 0.2s;
+  cursor: grab;
+}
+#landingpage section.cards article figure {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  min-height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #05CB95;
+  transition: background 0.2s;
+}
+#landingpage section.cards article figure svg {
+  fill: #FFF;
+  stroke: #FFF;
+  transition: stroke 0.2s, fill 0.2s, transform 0.6s;
+}
+#landingpage section.cards article h1 {
+  color: #090909;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0 0 3px 0;
+  transition: color 0.2s;
+}
+#landingpage section.cards article p {
+  max-width: 210px;
+  color: #090909;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  transition: color 0.2s;
+}
+#landingpage section.cards article:hover {
+  background: #05CB95;
+}
+#landingpage section.cards article:hover figure {
+  background: #FFF;
+}
+#landingpage section.cards article:hover figure svg {
+  fill: #05CB95;
+  stroke: #05CB95;
+  transform: rotate(360deg);
+}
+#landingpage section.cards article:hover h1 {
+  color: #FFF;
+}
+#landingpage section.cards article:hover P {
+  color: #FFF;
+}
+#landingpage section.solutions {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto 100px;
+}
+#landingpage section.solutions .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 44px 0;
+}
+#landingpage section.solutions .title div:first-child h1 {
+  color: #090909;
+  font-family: "Nunito", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+#landingpage section.solutions .title div:first-child h1 small {
+  color: #090909;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+}
+#landingpage section.solutions .title div:first-child p {
+  color: #6F6F6F;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#landingpage section.solutions .title div:last-child {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+#landingpage section.solutions .title div:last-child button {
+  all: unset;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#landingpage section.solutions .title div:last-child button:hover div {
+  border-color: #05CB95;
+  background: #05CB95;
+  transform: scale(1.15);
+}
+#landingpage section.solutions .title div:last-child button:hover svg {
+  stroke: #FFF;
+}
+#landingpage section.solutions .title div:last-child div {
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid #C2C2C2;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+#landingpage section.solutions .title div:last-child svg {
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  min-height: 24px;
+  stroke: #C2C2C2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: stroke 0.2s;
+}
+#landingpage section.solutions .cards {
+  display: flex;
+  align-items: center;
+  overflow-y: visible;
+}
+#landingpage section.solutions .cards::-webkit-scrollbar {
+  height: 0;
+}
+#landingpage section.solutions .cards-container {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+#landingpage section.solutions .cards-container .card {
+  min-width: 330px;
+  height: 400px;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.95;
+  border-radius: 32px;
+  cursor: pointer;
+}
+#landingpage section.solutions .cards-container .card p {
+  color: #090909;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+#landingpage section.solutions .cards-container .card div {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  transition: transform 0.6s;
+}
+#landingpage section.solutions .cards-container .card div p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#landingpage section.solutions .cards-container .card div svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.6s;
+}
+#landingpage section.solutions .cards-container .card:nth-child(1) {
+  background: #05CB95;
+}
+#landingpage section.solutions .cards-container .card:nth-child(1) p {
+  color: #FFF;
+}
+#landingpage section.solutions .cards-container .card:nth-child(1) div p {
+  color: #FFF;
+}
+#landingpage section.solutions .cards-container .card:nth-child(1) div svg {
+  stroke: #FFF;
+}
+#landingpage section.solutions .cards-container .card:nth-child(2) {
+  background: #F6F6ED;
+}
+#landingpage section.solutions .cards-container .card:nth-child(2) div p {
+  color: #090909;
+}
+#landingpage section.solutions .cards-container .card:nth-child(2) div svg {
+  stroke: #090909;
+}
+#landingpage section.solutions .cards-container .card:nth-child(3) {
+  background: #ECF8FD;
+}
+#landingpage section.solutions .cards-container .card:nth-child(3) div p {
+  color: #44C7FF;
+}
+#landingpage section.solutions .cards-container .card:nth-child(3) div svg {
+  stroke: #44C7FF;
+}
+#landingpage section.solutions .cards-container .card:nth-child(4) {
+  background: #E9F9F9;
+}
+#landingpage section.solutions .cards-container .card:nth-child(4) div p {
+  color: #00B1B1;
+}
+#landingpage section.solutions .cards-container .card:nth-child(4) div svg {
+  stroke: #00B1B1;
+}
+#landingpage section.solutions .cards-container .card:nth-child(5) {
+  background: #EEF0FC;
+}
+#landingpage section.solutions .cards-container .card:nth-child(5) div p {
+  color: #2339C5;
+}
+#landingpage section.solutions .cards-container .card:nth-child(5) div svg {
+  stroke: #2339C5;
+}
+#landingpage section.solutions .cards-container .card:hover div {
+  transform: scale(1.2);
+}
+#landingpage section.solutions .cards-container .card:hover div svg {
+  transform: rotate(360deg);
+}
+#landingpage section.about {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 70px;
+  background: #EAF9F9;
+  padding: 79px 68px 0 61px;
+}
+#landingpage section.about .programs {
+  width: 100%;
+  max-width: 530px;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+#landingpage section.about .programs img:nth-child(1) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+#landingpage section.about .programs img:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  z-index: 2;
+  box-shadow: 10px 100px 109px 0px rgba(0, 0, 0, 0.2);
+}
+#landingpage section.about .programs img:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+#landingpage section.about .title h1 {
+  color: #090909;
+  font-family: "Nunito", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  line-height: 55px;
+}
+#landingpage section.about .title h1 small {
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  margin: 0 0 3px 0;
+}
+#landingpage section.about .title p {
+  max-width: 426px;
+  color: #090909;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 10px 0 47px 0;
+}
+#landingpage section.about .title input {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 0 24px;
+  border: 2px solid #05CB95;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  background: #05CB95;
+  color: #FFF;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+#landingpage section.about .title input:hover {
+  border-color: #079F72;
+  background: #079F72;
+}
+#landingpage section.doubts {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  column-gap: 64px;
+  border-radius: 70px;
+  background: linear-gradient(90deg, #292F31 49.42%, rgba(41, 47, 49, 0) 90.96%), url("./assets/images/background-duvidas.png");
+  background-size: cover;
+  background-position: center;
+  padding: 54px 58px;
+}
+#landingpage section.doubts img {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+#landingpage section.doubts .questions {
+  width: 100%;
+  max-width: 584px;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 22px;
+  border-radius: 32px;
+  row-gap: 2px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 55%, rgba(255, 251, 251, 0.95) 100%);
+}
+#landingpage section.doubts .questions .question {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-radius: 16px;
+  row-gap: 8px;
+  padding: 15px 20px;
+  cursor: pointer;
+}
+#landingpage section.doubts .questions .question .title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#landingpage section.doubts .questions .question .title p {
+  display: flex;
+  color: #090909;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: color 0.2s;
+}
+#landingpage section.doubts .questions .question .title svg {
+  stroke: #090909;
+  transition: stroke 0.2s, transform 0.6s;
+}
+#landingpage section.doubts .questions .question p {
+  display: none;
+  color: #090909;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: color 0.2s;
+}
+#landingpage section.doubts .questions .question.active {
+  background: #E0ECE9;
+  padding: 15px 20px 20px;
+}
+#landingpage section.doubts .questions .question.active .title p {
+  color: #05CB95;
+}
+#landingpage section.doubts .questions .question.active .title svg {
+  transform: rotate(180deg);
+  stroke: #05CB95;
+}
+#landingpage section.doubts .questions .question.active p {
+  display: flex;
+}
+#landingpage section.doubts .questions .question:hover .title p {
+  color: #05CB95;
+}
+#landingpage section.doubts .questions .question:hover .title svg {
+  stroke: #05CB95;
+}
+#landingpage section.doubts .title h1 {
+  color: #FFF;
+  font-family: "Nunito", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 52px;
+}
+#landingpage section.doubts .title h1 small {
+  color: #090909;
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 52px;
+}
+#landingpage section.fixed {
+  display: flex;
+  align-items: end;
+  column-gap: 11px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+}
+#landingpage section.fixed button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s, transform 0.6s;
+  cursor: pointer;
+}
+#landingpage section.fixed button:first-child {
+  width: 70px;
+  height: 70px;
+  background: #05CB95;
+}
+#landingpage section.fixed button:first-child:hover {
+  background: #079F72;
+}
+#landingpage section.fixed button:last-child {
+  width: 55px;
+  height: 55px;
+  background: #090909;
+}
+#landingpage section.fixed button:last-child:hover {
+  transform: translateY(-6px) scale(1.1);
+}
+#landingpage footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#landingpage footer .infos {
+  width: 100%;
+  max-width: 1170px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin: 0 0 54px 0;
+}
+#landingpage footer .infos section h1 {
+  color: #090909;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#landingpage footer .infos section p {
+  max-width: 232px;
+  color: #6F6F6F;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 12px 0 0 0;
+}
+#landingpage footer .infos section ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  list-style: none;
+  margin: 18px 0 0 0;
+}
+#landingpage footer .infos section ul li a {
+  color: #6F6F6F;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+#landingpage footer .infos section ul li a:hover {
+  color: #05CB95;
+}
+#landingpage footer .infos section .networks {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin: 26px 0 0 0;
+}
+#landingpage footer .infos section .networks a {
+  text-decoration: none;
+}
+#landingpage footer .infos section .networks a button {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #090909;
+  border-radius: 50%;
+  background: transparent;
+  transition: border 0.2s, background 0.2s;
+  cursor: pointer;
+}
+#landingpage footer .infos section .networks a button svg {
+  fill: #090909;
+  transition: fill 0.2s, transform 0.6s;
+}
+#landingpage footer .infos section .networks a button:hover {
+  border-color: #05CB95;
+  background: #05CB95;
+}
+#landingpage footer .infos section .networks a button:hover svg {
+  fill: #Fff;
+  transform: rotate(360deg);
+}
+#landingpage footer .actions {
+  display: flex;
+  align-items: center;
+  column-gap: 27px;
+  margin: 0 0 24px 0;
+}
+#landingpage footer .actions input {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  padding: 0 24px;
+  border: 2px solid #05CB95;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+#landingpage footer .actions input:first-child {
+  background: transparent;
+  color: #05CB95;
+}
+#landingpage footer .actions input:first-child:hover {
+  border-color: #079F72;
+  background: #079F72;
+  color: #FFF;
+}
+#landingpage footer .actions input:last-child {
+  background: #05CB95;
+  color: #FFF;
+}
+#landingpage footer .actions input:last-child:hover {
+  border-color: #079F72;
+  background: #079F72;
+}
+#landingpage footer p {
+  color: #6F6F6F;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0 0 12px 0;
+}
+#landingpage footer img {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
